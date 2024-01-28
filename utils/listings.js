@@ -39,7 +39,7 @@ function visualizeListings(listings) {
         <a class="pointer relative" href="listing.html?id=${listing.id}">
             <div class="listing max-w-[300px] flex flex-col justify-between h-full gap-4">
             <div>
-                <img width="300" class="w-[300px] h-[300px] object-cover" src="${imageUrl} alt="${listing.title}">
+                <img width="300" class="w-[300px] h-[300px] object-cover" src="${imageUrl}" alt="${listing.title}">
                 <div class="absolute top-4 left-4 bg-green-500 w-12 h-12 flex items-center justify-center rounded-full text-white p-2">${listing._count.bids}</div>
                 <h2 class="text-xl my-2 break-words">${listing.title}</h3>
                 <p class="text-md my-1 break-words">${listing.description}</p>
