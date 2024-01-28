@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Auction House</title>
+    <link href="../css/output.css" rel="stylesheet">
+    <script src="utils/register.js" defer type="module"></script>
+    <script src="utils/navigation.js" defer type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="flex px-4 py-12 max-w-[1600px] mx-auto">
+            <div class="flex-1">
+                <a href="index.html"><h1 class="text-lg md:text-4xl font-bold">Auction House</h1></a>
+            </div>
+            <div class="flex-1">
+                <nav class="flex justify-end">
+                    <ul class="flex">
+                        <li class="px-4"><a href="index.html">Listings</a></li>
+                        <li class="px-4" id="loginButton"><a href="login.html">Login</a></li>
+                        <li class="px-4" id="registerButton"><a href="register.html">Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="main" class="flex w-screen mx-auto max-w-[1600px] h-[80vh] items-center justify-center">
+
+            <div class="p-20 drop-shadow rounded-xl bg-slate-300 min-w-[50%] min-h-[40%]">
+
+                <h1 class="text-4xl py-8">register</h1>
+                <form id="registerForm" class="flex flex-col">
+                    <label class="text-xl font-bold my-4" for="name">username <span class="text-xl text-red-500">*</span></label>
+                    <input class="h-12 font-xl p-4" type="text" name="name" id="registerName" autocomplete="username">
+                    <label class="text-xl font-bold my-4" for="email">email <span class="text-xl text-red-500">*</span></label>
+                    <input class="h-12 font-xl p-4" type="email" name="email" id="registerEmail" autocomplete="email">
+                    <label class="text-xl font-bold my-4" for="password">password <span class="text-xl text-red-500">*</span></label>
+                    <input class="h-12 font-xl p-4" type="password" name="password" id="registerPassword" autocomplete="current-password">
+                    <button class="h-12 font-xl font-bold text-center my-4 bg-gray-800 text-white pointer" type="submit">Register now</button>
+                </form>
+                <p class="text-xl">Already have an account? <a href="login.html" class="text-indigo-950">Login here</a></p>
+                <div class="bg-red-500 hidden p-8 my-6" id="registerError">
+            </div>
+                
+            </div>
+        </section>
+        <footer class="max-w-[1600px] flex items-center justify-center">
+            <p>&copy; 2024 - Elisbeth Trondsen</p> 
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Auction House</title>
+    <link href="../css/output.css" rel="stylesheet">
+    <script src="utils/navigation.js" defer type="module"></script>
+    <script src="utils/listings.js" defer type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="flex px-4 py-12 max-w-[1600px] mx-auto">
+            <div class="flex-1">
+                <a href="index.html"><h1 class="text-lg md:text-4xl font-bold">Auction House</h1></a>
+            </div>
+            <div class="flex-1">
+                <nav class="flex justify-end">
+                    <ul class="flex">
+                        <li class="px-4"><a href="index.html">Listings</a></li>
+                        <li class="px-4" id="loginButton"><a href="login.html">Login</a></li>
+                        <li class="px-4" id="registerButton"><a href="register.html">Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="main" class="max-w-[1600px] mx-auto p-4">
+            <h1 class="text-2xl my-8">Listings</h1>
+            <dialog id="modal" class="min-w-[70%] bg-slate-300">
+                <form method="dialog">
+                    <button class="absolute top-4 right-4">X</button>
+                </form>
+                <h2 class="text-2xl p-8">Create a new listing</h2>
+                <form id="createForm" class="flex flex-col items-center justify-center p-8">
+                    <label class="text-xl font-bold my-4" for="title">Title <span class="text-red-500">*</span></label>
+                    <input class="h-12 font-xl p-4 w-2/3" type="text" name="title" id="createTitle" required>
+                    <label class="text-xl font-bold my-4" for="description">Description <span class="text-red-500">*</span></label>
+                    <textarea class="h-12 font-xl p-4 w-2/3" name="description" id="createDescription" cols="30" rows="10" required></textarea>
+                    <label class="text-xl font-bold my-4" for="imageUrl">Image URL</label>
+                    <input class="h-12 font-xl p-4 w-2/3" type="text" name="imageUrl" id="createImageUrl">
+                    <label class="text-xl font-bold my-4" for="endsAt">Ends at</label>
+                    <input class="h-12 font-xl p-4 w-2/3" type="datetime-local" name="endsAt" id="createEndsAt">
+                    <button class="h-12 font-xl font-bold text-center my-4 bg-gray-800 text-white pointer px-8 py-4 flex items-center" type="submit">Create listing</button>
+                </form>
+                <div class="bg-red-500 hidden p-8 my-6" id="createError">
+            </dialog>
+            <div class="flex gap-4 justify-between flex-col-reverse md:flex-row">
+
+                <div class="listings-container grid max-w-[1600px] grid-cols-1 gap-8 md:grid-cols-3 sm:grid-cols-2"></div>
+                <div id="rightCol" class="w-full md:w-[25%] flex flex-col gap-4">
+                    <div class="profile-box bg-slate-300 p-8 min-h-[20vh] w-full rounded-xl"></div>
+                    <button id="createButton" class="bg-slate-300 px-8 py-4 w-full rounded-xl">Create new listing</button>
+                </div>
+            </div>
+        </section>
+        <footer class="max-w-[1600px] flex items-center justify-center">
+            <p>&copy; 2024 - Elisbeth Trondsen</p> 
+        </footer>
+    </main>
+</body>
+</html>
